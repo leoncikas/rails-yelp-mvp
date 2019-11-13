@@ -1,0 +1,23 @@
+rails generate model Restaurant name:string adress:string category:string
+rails generate model Review content:text rating:integer
+
+Adding foreign key in the migration file for the reviews
+      t.references :restaurant, foreign_key: true
+
+
+Apparently i need more catecogories
+rails generate migration AddColumnToRestaurants phone_number:integer
+rails generate migration ChangeAdressOnRestaurants
+
+rails generate migration ChangePhone_numberOnRestaurants
+
+Generate controllers
+rails generate controller restaurants index show edit new update destroy create
+rails generate controller reviews index show edit new update destroy create
+
+
+Seeded
+
+Now adding routes
+
+=
